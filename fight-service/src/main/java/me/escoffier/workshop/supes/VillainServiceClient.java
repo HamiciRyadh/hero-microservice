@@ -19,7 +19,7 @@ public interface VillainServiceClient {
     @Retry(retryOn = TimeoutException.class,
             maxRetries = 4, maxDuration = 10,
             durationUnit = ChronoUnit.SECONDS)
-    @Timeout(value = 3, unit = ChronoUnit.SECONDS)
+    @Timeout(value = 1, unit = ChronoUnit.SECONDS)
     @Fallback(fallbackMethod = "getFallbackVillain")
     @Path("/villains/random")
     @GET

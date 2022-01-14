@@ -19,7 +19,7 @@ public interface HeroServiceClient {
     @Retry(retryOn = TimeoutException.class,
             maxRetries = 4, maxDuration = 10,
             durationUnit = ChronoUnit.SECONDS)
-    @Timeout(value = 3, unit = ChronoUnit.SECONDS)
+    @Timeout(value = 1, unit = ChronoUnit.SECONDS)
     @Fallback(fallbackMethod = "getFallbackHero")
     @Path("/heroes/random")
     @GET

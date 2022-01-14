@@ -6,7 +6,7 @@ metadata:
   labels:
     app: hero-service
 spec:
-  replicas: 1
+  replicas: 2
   strategy:
     type: RollingUpdate
   selector:
@@ -57,6 +57,6 @@ spec:
             port: 8080
             scheme: HTTP
           initialDelaySeconds: 0
-          periodSeconds: 5
+          periodSeconds: 30
           successThreshold: 1
-          timeoutSeconds: 2
+          timeoutSeconds: 10

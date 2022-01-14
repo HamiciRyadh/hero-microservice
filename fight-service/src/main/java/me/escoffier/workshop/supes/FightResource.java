@@ -1,5 +1,7 @@
 package me.escoffier.workshop.supes;
 
+import io.micrometer.core.annotation.Counted;
+import io.micrometer.core.annotation.Timed;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.jboss.logging.Logger;
 
@@ -35,6 +37,8 @@ public class FightResource {
     }
 
     @GET
+    @Counted("fight-service.fight.invocations")
+    @Timed("fight-service.fight.time")
     @Path("/fight")
     public Fight fight() {
         return fight(

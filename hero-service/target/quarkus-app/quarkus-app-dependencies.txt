@@ -13,6 +13,8 @@ com.sun.istack:istack-commons-runtime::jar:3.0.10
 io.agroal:agroal-api::jar:1.14
 io.agroal:agroal-narayana::jar:1.14
 io.agroal:agroal-pool::jar:1.14
+io.micrometer:micrometer-core::jar:1.8.1
+io.micrometer:micrometer-registry-prometheus::jar:1.8.1
 io.netty:netty-buffer::jar:4.1.72.Final
 io.netty:netty-codec-dns::jar:4.1.72.Final
 io.netty:netty-codec-haproxy::jar:4.1.72.Final
@@ -27,6 +29,11 @@ io.netty:netty-resolver-dns::jar:4.1.72.Final
 io.netty:netty-resolver::jar:4.1.72.Final
 io.netty:netty-tcnative-classes::jar:2.0.46.Final
 io.netty:netty-transport::jar:4.1.72.Final
+io.prometheus:simpleclient::jar:0.12.0
+io.prometheus:simpleclient_common::jar:0.12.0
+io.prometheus:simpleclient_tracer_common::jar:0.12.0
+io.prometheus:simpleclient_tracer_otel::jar:0.12.0
+io.prometheus:simpleclient_tracer_otel_agent::jar:0.12.0
 io.quarkus.arc:arc::jar:2.6.1.Final
 io.quarkus.resteasy.reactive:resteasy-reactive-common::jar:2.6.1.Final
 io.quarkus.resteasy.reactive:resteasy-reactive-jackson::jar:2.6.1.Final
@@ -49,6 +56,8 @@ io.quarkus:quarkus-hibernate-orm::jar:2.6.1.Final
 io.quarkus:quarkus-jackson::jar:2.6.1.Final
 io.quarkus:quarkus-jdbc-postgresql::jar:2.6.1.Final
 io.quarkus:quarkus-jsonp::jar:2.6.1.Final
+io.quarkus:quarkus-micrometer-registry-prometheus::jar:2.6.1.Final
+io.quarkus:quarkus-micrometer::jar:2.6.1.Final
 io.quarkus:quarkus-mutiny::jar:2.6.1.Final
 io.quarkus:quarkus-narayana-jta::jar:2.6.1.Final
 io.quarkus:quarkus-netty::jar:2.6.1.Final
@@ -60,6 +69,7 @@ io.quarkus:quarkus-resteasy-reactive-jackson::jar:2.6.1.Final
 io.quarkus:quarkus-resteasy-reactive::jar:2.6.1.Final
 io.quarkus:quarkus-security-runtime-spi::jar:2.6.1.Final
 io.quarkus:quarkus-smallrye-context-propagation::jar:2.6.1.Final
+io.quarkus:quarkus-smallrye-health::jar:2.6.1.Final
 io.quarkus:quarkus-vertx-http-dev-console-runtime-spi::jar:2.6.1.Final
 io.quarkus:quarkus-vertx-http::jar:2.6.1.Final
 io.quarkus:quarkus-vertx::jar:2.6.1.Final
@@ -88,6 +98,9 @@ io.smallrye:smallrye-context-propagation-jta::jar:1.2.2
 io.smallrye:smallrye-context-propagation-storage::jar:1.2.2
 io.smallrye:smallrye-context-propagation::jar:1.2.2
 io.smallrye:smallrye-fault-tolerance-vertx::jar:5.2.1
+io.smallrye:smallrye-health-api::jar:3.1.2
+io.smallrye:smallrye-health-provided-checks::jar:3.1.2
+io.smallrye:smallrye-health::jar:3.1.2
 io.vertx:vertx-auth-common::jar:4.2.2
 io.vertx:vertx-bridge-common::jar:4.2.2
 io.vertx:vertx-codegen::jar:4.2.2
@@ -104,10 +117,12 @@ jakarta.transaction:jakarta.transaction-api::jar:1.3.3
 net.bytebuddy:byte-buddy::jar:1.11.20
 org.eclipse.microprofile.config:microprofile-config-api::jar:2.0
 org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api::jar:1.2
+org.eclipse.microprofile.health:microprofile-health-api::jar:3.1
 org.glassfish.jaxb:jaxb-runtime::jar:2.3.3-b02
 org.glassfish.jaxb:txw2::jar:2.3.3-b02
 org.glassfish:jakarta.json::jar:1.1.6
 org.graalvm.sdk:graal-sdk::jar:21.3.0
+org.hdrhistogram:HdrHistogram::jar:2.1.12
 org.hibernate.common:hibernate-commons-annotations::jar:5.1.2.Final
 org.hibernate:hibernate-core::jar:5.6.1.Final
 org.hibernate:hibernate-graalvm::jar:5.6.1.Final
@@ -124,6 +139,7 @@ org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec::jar:2.0.1.Final
 org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec::jar:2.0.0.Final
 org.jboss.threads:jboss-threads::jar:3.4.2.Final
 org.jboss:jboss-transaction-spi::jar:7.6.0.Final
+org.latencyutils:LatencyUtils::jar:2.0.3
 org.postgresql:postgresql::jar:42.3.1
 org.reactivestreams:reactive-streams::jar:1.0.3
 org.slf4j:slf4j-api::jar:1.7.30
