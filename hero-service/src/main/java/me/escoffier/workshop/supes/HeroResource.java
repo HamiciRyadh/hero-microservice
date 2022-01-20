@@ -9,9 +9,9 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/")
 @Produces(MediaType.APPLICATION_JSON)
-public class FightResource {
+public class HeroResource {
 
-    private static final Logger LOGGER = Logger.getLogger(FightResource.class);
+    private static final Logger LOGGER = Logger.getLogger(HeroResource.class);
 
     @GET
     @Path("/heroes/random")

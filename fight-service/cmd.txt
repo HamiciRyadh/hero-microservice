@@ -1,7 +1,0 @@
-mvn clean package; docker build -f src/main/docker/Dockerfile.jvm -t workshop/hero-service:latest .; kubectl delete deployment hero-service; kubectl apply -f kubernetes/
-
-mvn clean package; docker build -f src/main/docker/Dockerfile.jvm -t workshop/villain-service:latest .; kubectl delete deployment villain-service; kubectl apply -f kubernetes/
-
-mvn clean package; docker build -f src/main/docker/Dockerfile.jvm -t workshop/fight-service:latest .; kubectl delete deployment fight-service; kubectl apply -f kubernetes/
-
-eval $(minikube docker-env)
