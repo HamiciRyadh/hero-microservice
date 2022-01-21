@@ -53,7 +53,7 @@ minikube service fight-service --url
 # Chaos
 
 A simple example of chaos engineering, it is a command-line tool that connects to the kubernetes cluster to delete every
-10 seconds a running pod. It takes a parameter `--deplyment` which corresponds to the names of the pods to delete separated by a space.
+10 seconds a running pod. It takes a parameter `--deployment` which corresponds to the names of the pods to delete separated by a space.
 
 ## Build and deployment
 
