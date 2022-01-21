@@ -24,8 +24,7 @@ before falling back to a default, predefined result.
 
 ## Build and deployment
 
-To build and deploy the different services, open a new terminal at the project's root and configure it to use the 
-Minikube Docker daemon with:
+To build and deploy the different services, open a new terminal at the microservice project's root (`/microservice`) and configure it to use the Minikube Docker daemon with:
 
 ```
 # On Linux/Mac
@@ -54,8 +53,11 @@ minikube service fight-service --url
 # Chaos
 
 A simple example of chaos engineering, it is a command-line tool that connects to the kubernetes cluster to delete every
-10 seconds a running pod. It takes a parameter `--deplyment` which corresponds to the names of the pods to delete separated
-by a space.
+10 seconds a running pod. It takes a parameter `--deplyment` which corresponds to the names of the pods to delete separated by a space.
+
+## Build and deployment
+
+Open a new terminal at the chaos project's root (`/chaos`) and run the following instructions:
 
 ```
 # To build
