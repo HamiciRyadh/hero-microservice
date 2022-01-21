@@ -1,9 +1,9 @@
+/.idea/
 /chaos/.idea/
 /chaos/target/
-/fight-service/.idea/
-/fight-service/target/
-/hero-service/.idea/
-/hero-service/target/
-/villain-service/.idea/
-/villain-service/target/
-/.idea/
+/microservice/fight-service/.idea/
+/microservice/fight-service/target/
+/microservice/hero-service/.idea/
+/microservice/hero-service/target/
+/microservice/villain-service/.idea/
+/microservice/villain-service/target/
